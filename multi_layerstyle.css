@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Header Styling */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(168, 36, 36, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+.cta-btn {
+    background-color: #00bcd4;
+    color: #121212;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #0097a7;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-email {
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.user-menu .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1e1e1e;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-menu:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    list-style: none;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #00bcd4;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f9eaea;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background-color: #1e1e1e;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Tool Container */
+.tool-container {
+    max-width: 800px;
+    margin: 120px auto 50px; /* Added top margin to clear header */
+    padding: 30px;
+    background: linear-gradient(145deg, #1e1e2f, #2e2e3f);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tool-container h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00bcd4;
+    background: linear-gradient(135deg, #00bcd4 0%, #00f260 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tool-container .description {
+    text-align: center;
+    font-size: 14px;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+}
+
+.tool-container form textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: #2e2e3f;
+    color: #fff;
+    resize: none;
+}
+
+.tool-container form input,
+.tool-container form select,
+.tool-container form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: #2e2e3f;
+    color: #fff;
+    font-size: 16px;
+}
+
+.tool-container form button {
+    background: #00bcd4;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.tool-container form button:hover {
+    background: #0097a7;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .tool-container h1 {
+        font-size: 28px;
+    }
+
+    .tool-container form textarea {
+        height: 120px;
+    }
+}
+
+.generated-key, .result {
+    margin-top: 15px;
+    padding: 10px;
+    background: #2e2e3f;
+    color: #00bcd4;
+    border-radius: 5px;
+    word-wrap: break-word;
+}

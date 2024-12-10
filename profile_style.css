@@ -1,0 +1,224 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(168, 36, 36, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+.cta-btn {
+    background-color: #00bcd4;
+    color: #121212;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #0097a7;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-email {
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.user-menu .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1e1e1e;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-menu:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    list-style: none;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #00bcd4;
+}
+
+/* Profile Page Styling */
+.profile-container {
+    padding-top: 120px; /* To avoid header overlap */
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0097a7;
+}
+
+/* Key Management Styling */
+.key-form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.key-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    width: 300px;
+}
+
+.key-form button {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.key-form button:hover {
+    background-color: #0097a7;
+}
+
+/* Keys Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: 1px solid #444;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #222;
+    color: #00bcd4;
+}
+
+td {
+    background-color: #333;
+    color: #fff;
+}
+
+td a {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    color: #ff1a1a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .key-form input,
+    .key-form button {
+        width: 100%;
+    }
+}

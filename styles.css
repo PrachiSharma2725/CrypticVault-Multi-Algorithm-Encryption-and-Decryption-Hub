@@ -1,0 +1,341 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-size: 16px;
+    
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+.cta-btn {
+    background-color: #00bcd4;
+    color: #121212;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 30px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #0097a7;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background-color: #c97070;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease;
+    }
+
+    .nav-links a {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .cta-btn {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative; /* Ensure this is set */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/vault_bg.jpg) center / cover no-repeat;
+    opacity: 0.1; /* Faint background image for texture */
+    z-index: 0; /* Send to back */
+}
+
+.hero-container {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #00bcd4 0%, #00f260 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #dcdcdc;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.hero-btn {
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #00bcd4;
+    color: #121212;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero-btn:hover {
+    background-color: #0097a7;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-email {
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.user-menu .dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    background-color: #1e1e1e; /* Same background as header */
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-menu:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown li {
+    list-style: none;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #00bcd4; /* Change background on hover */
+}
+
+/* Image Encryptor Section */
+.image-encryptor {
+    padding: 80px 20px 40px;
+    text-align: center;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.glass-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.glass-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.glass-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.glass-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+.glass-container .btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.glass-container .btn {
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.glass-container .btn:hover {
+    background-color: #ff7f00;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .cta-btn {
+        margin-top: 10px;
+    }
+
+    .glass-container {
+        width: 90%;
+    }
+}
